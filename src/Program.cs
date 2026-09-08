@@ -30,7 +30,39 @@
 
             // 5
             Console.WriteLine("5)\n-------------------------------");       
-            TaskMethodsLibrary.TestValueType(5, 8);
+            TaskMethodsLibrary.TestValueType();
+            Console.WriteLine("-------------------------------\n");
+            // end
+
+            // 6
+            Console.WriteLine("6)\n-------------------------------");
+            TaskMethodsLibrary.TestReferenceType();
+            Console.WriteLine("-------------------------------\n");
+            // end
+
+            // 7
+            Console.WriteLine("7)\n-------------------------------");
+            TaskMethodsLibrary.ConcatenatedString("Hello ", "World!");
+            Console.WriteLine("-------------------------------\n");
+            // end
+
+            // 8
+            Console.WriteLine("8)\n-------------------------------");
+            double interest = TaskMethodsLibrary.CalculateSimpleInterest(10000, 5, 2);
+            Console.WriteLine($"Simple Interest = {interest}");
+            Console.WriteLine("-------------------------------\n");
+            // end
+
+            // 9
+            Console.WriteLine("9)\n-------------------------------");
+            double bmi = TaskMethodsLibrary.CalculateBMI(75, 1.75);
+            Console.WriteLine($"BMI = {bmi:F2}");
+            Console.WriteLine("-------------------------------\n");
+            // end
+
+            // 10
+            Console.WriteLine("10)\n-------------------------------");
+            TaskMethodsLibrary.DisplayDateFormat();
             Console.WriteLine("-------------------------------\n");
             // end
 

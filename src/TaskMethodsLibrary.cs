@@ -591,5 +591,103 @@ namespace CSharpBasics_Task
             return sum;
         }
 
+        public static int[] MergeTwoArraysAndOrder(int[] arr1, int[] arr2)
+        {
+            int size = arr1.Length + arr2.Length;
+            int[] arr3 = new int[size];
+
+            for (int i = 0; i < arr1.Length; i++)
+            {
+                arr3[i] = arr1[i];
+            }
+
+            for (int i = 0; i < arr2.Length; i++)
+            {
+                arr3[i + arr1.Length] = arr2[i];
+            }
+
+            Array.Sort(arr3);
+            return arr3;
+        }
+
+        public static void FrequencyOfEachElementInArr(int[] arr)
+        {            
+            for(int i = 0; i < arr.Length; i++)
+            {
+                int frequency = 0;
+                bool isAlreadyProcessed = false;
+
+                for(int j = 0; j < arr.Length; j++)
+                {
+                    if (arr[i] == arr[j])
+                        frequency++;
+                }
+
+                for(int j = 0; j < i; j++)
+                {
+                    if (arr[i] == arr[j])
+                    {
+                        isAlreadyProcessed = true;
+                        break;
+                    }
+                }
+
+                if(!isAlreadyProcessed)
+                    Console.WriteLine($"Frequency of {arr[i]}: {frequency}");                
+            }
+        }
+
+        public static void GetMaxAndMinOfArray(int[] arr)
+        {
+            if (arr == null || arr.Length == 0) return;
+
+            int max = arr[0], min = arr[0];
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (max < arr[i])
+                    max = arr[i];
+
+                if (min > arr[i])
+                    min = arr[i];
+            }
+
+            Console.WriteLine($"Max: {max}, Min: {min}");
+        }
+
+        public static void GetSecondLargestElementInArr(int[] arr)
+        {
+            
+            if (arr == null || arr.Length < 2)
+            {
+                Console.WriteLine("Array must have at least two elements.");
+                return;
+            }
+
+            int max = int.MinValue;
+            int secondMax = int.MinValue;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] > max)
+                {
+                    secondMax = max; 
+                    max = arr[i];
+                }
+                else if (arr[i] > secondMax && arr[i] != max)
+                {
+                    secondMax = arr[i]; 
+                }
+            }
+
+            if (secondMax == int.MinValue)
+            {
+                Console.WriteLine("There is no second largest element (all elements are equal).");
+            }
+            else
+            {
+                Console.WriteLine($"Second Largest element: {secondMax}");
+            }
+        }
     }
 }

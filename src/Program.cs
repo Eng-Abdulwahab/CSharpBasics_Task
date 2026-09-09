@@ -4,6 +4,81 @@
     {
         static void Main(string[] args)
         {
+            // 33
+            Console.WriteLine("33) [Sum of Array Elements]\n-------------------------------");
+
+            int[] numbers33 = { 10, 20, 30, 40, 50 };
+
+            int totalSum = TaskMethodsLibrary.SumOfArrayElements(numbers33);
+
+            Console.WriteLine($"Array elements: {string.Join(", ", numbers33)}");
+            Console.WriteLine($"Sum of array elements = {totalSum}");
+
+            Console.WriteLine("-------------------------------\n");
+            // end
+
+            Console.WriteLine("\nPress Enter to continue...");
+            Console.ReadKey();
+
+            // 34
+            Console.WriteLine("34) [Merge and Sort Two Unsorted Arrays]\n-------------------------------");
+
+            int[] array1 = { 9, 2, 5, 1 };
+            int[] array2 = { 8, 3, 7, 4 };
+
+            int[] result = TaskMethodsLibrary.MergeTwoArraysAndOrder(array1, array2);
+
+            Console.WriteLine($"Array 1: {string.Join(", ", array1)}");
+            Console.WriteLine($"Array 2: {string.Join(", ", array2)}");
+            Console.WriteLine($"Merged & Sorted Array: {string.Join(", ", result)}");
+
+            Console.WriteLine("-------------------------------\n");
+            // end
+
+            Console.WriteLine("\nPress Enter to continue...");
+            Console.ReadKey();
+
+            // 35
+            Console.WriteLine("35) [Frequency of Each Element in Array]\n-------------------------------");
+
+            int[] numbers35 = { 5, 2, 8, 5, 2, 5, 9, 8 };
+
+            Console.WriteLine($"Array elements: {string.Join(", ", numbers35)}\n");
+
+            TaskMethodsLibrary.FrequencyOfEachElementInArr(numbers35);
+
+            Console.WriteLine("-------------------------------\n");
+            // end
+
+            Console.WriteLine("\nPress Enter to continue...");
+            Console.ReadKey();
+
+            // 36
+            Console.WriteLine("36) [Max and Min in Array]\n-------------------------------");
+
+            int[] numbers36 = { 45, 12, 89, 3, 27, -5, 64 };
+
+            Console.WriteLine($"Array elements: {string.Join(", ", numbers36)}\n");
+
+            TaskMethodsLibrary.GetMaxAndMinOfArray(numbers36);
+
+            Console.WriteLine("-------------------------------\n");
+            // end
+
+            Console.WriteLine("\nPress Enter to continue...");
+            Console.ReadKey();
+
+            // 37
+            Console.WriteLine("37) [Find Second Largest Element in Array]\n-------------------------------");
+
+            int[] numbers37 = { 10, 20, 4, 45, 99, 99, 35 };
+
+            Console.WriteLine($"Array elements: {string.Join(", ", numbers37)}\n");
+
+            TaskMethodsLibrary.GetSecondLargestElementInArr(numbers37);
+
+            Console.WriteLine("-------------------------------\n");
+            // end
             // 1
             Console.WriteLine("1) [Print User Input Number]\n-------------------------------");
             TaskMethodsLibrary.GetNumberFromUser();
@@ -291,18 +366,10 @@
             Console.WriteLine("-------------------------------\n");
             // end
 
-            // 33
-            Console.WriteLine("33) [Sum of Array Elements]\n-------------------------------");
+            Console.WriteLine("\nPress Enter to continue...");
+            Console.ReadKey();
 
-            int[] numbers = { 10, 20, 30, 40, 50 };
-
-            int totalSum = TaskMethodsLibrary.SumOfArrayElements(numbers);
-
-            Console.WriteLine($"Array elements: {string.Join(", ", numbers)}");
-            Console.WriteLine($"Sum of array elements = {totalSum}");
-
-            Console.WriteLine("-------------------------------\n");
-            // end
+            
 
         }
     }

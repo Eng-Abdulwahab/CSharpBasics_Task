@@ -4,6 +4,12 @@
     {
         static void Main(string[] args)
         {
+            // 29
+            Console.WriteLine("29) [Convert Decimal To Binary]\n-------------------------------");
+            TaskMethodsLibrary.ConvertDecimalToBinary();
+            Console.WriteLine("-------------------------------\n");
+            // end 
+
             // 1
             Console.WriteLine("1) [Print User Input Number]\n-------------------------------");
             TaskMethodsLibrary.GetNumberFromUser();
@@ -200,6 +206,69 @@
             TaskMethodsLibrary.CalculatePower(2, 5);
             Console.WriteLine("-------------------------------\n");
             // end
+
+            Console.WriteLine("\nPress Enter to continue...");
+            Console.ReadKey();
+
+            // 23
+            Console.WriteLine("23) [CalculateMarksStatistics]\n-------------------------------");
+            TaskMethodsLibrary.CalculateMarksStatistics();
+            Console.WriteLine("-------------------------------\n");
+            // end
+
+            Console.WriteLine("\nPress Enter to continue...");
+            Console.ReadKey();
+            
+            // 24
+            Console.WriteLine("24) [Display Number of Days in Month]\n-------------------------------");
+            TaskMethodsLibrary.DisplayDaysInMonth();            
+            Console.WriteLine("-------------------------------\n");
+            // end
+
+            Console.WriteLine("\nPress Enter to continue...");
+            Console.ReadKey();
+
+            // 25
+            Console.WriteLine("25) [Simple Calculator]\n-------------------------------");
+            TaskMethodsLibrary.SimpleCalculator();            
+            Console.WriteLine("-------------------------------\n");
+            // end
+
+            Console.WriteLine("\nPress Enter to continue...");
+            Console.ReadKey();
+
+            // 26
+            Console.WriteLine("26) [Reversed String]\n-------------------------------");
+            TaskMethodsLibrary.ReverseString();
+            Console.WriteLine("-------------------------------\n");
+            // end
+
+            Console.WriteLine("\nPress Enter to continue...");
+            Console.ReadKey();
+
+            // 27
+            Console.WriteLine("27) [Reversed Integer]\n-------------------------------");
+            TaskMethodsLibrary.ReverseInt();
+            Console.WriteLine("-------------------------------\n");
+            // end 
+
+            Console.WriteLine("\nPress Enter to continue...");
+            Console.ReadKey();
+
+            // 28
+            Console.WriteLine("28) [Prime Numbers From Range]\n-------------------------------");
+            TaskMethodsLibrary.PrimeNumbersFromRange();
+            Console.WriteLine("-------------------------------\n");
+            // end 
+
+            Console.WriteLine("\nPress Enter to continue...");
+            Console.ReadKey();
+
+            // 29
+            Console.WriteLine("29) [Convert Decimal To Binary]\n-------------------------------");
+            TaskMethodsLibrary.ConvertDecimalToBinary();
+            Console.WriteLine("-------------------------------\n");
+            // end 
 
         }
     }

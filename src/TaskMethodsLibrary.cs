@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Text;
-using System.Xml.Serialization;
 
 
 
@@ -270,6 +269,204 @@ namespace CSharpBasics_Task
             }
 
             Console.WriteLine($"Output: {result}");
+        }
+
+        public static void CalculateMarksStatistics()
+        {
+            Console.WriteLine("Enter Marks of five subjects: ");
+
+            int total = 0;
+            int count = 5;
+            int mark;
+
+            for (int i = 1; i <= count; i++)
+            {
+                Console.Write($"Subject {i}: ");
+                while (!int.TryParse(Console.ReadLine(), out mark))
+                {
+                    Console.Write("Invalid input! Please enter a valid integer mark: ");
+                }
+                total += mark;
+            }
+
+            double average = (double)total / count;
+            double percentage = average;
+
+            Console.WriteLine($"Total marks = {total}");
+            Console.WriteLine($"Average Marks = {average:F0}");
+            Console.WriteLine($"Percentage = {percentage:F0}%");
+        }
+
+        public static void DisplayDaysInMonth()
+        {
+            int monthNumber;
+            Console.WriteLine("Enter month number: ");
+            while (!int.TryParse(Console.ReadLine(), out monthNumber) || monthNumber > 12 || monthNumber < 1 )
+            {
+                Console.Write("Invalid input! Please enter a valid month (1-12): ");
+            }  
+
+            int days = monthNumber switch
+            {
+                2 => 28, // February (Standard year assumption)
+                4 or 6 or 9 or 11 => 30,
+                _ => 31
+            };
+
+            Console.WriteLine($"Days in Month: {days}");
+        }
+
+        public static void SimpleCalculator()
+        {
+            double num1, num2;
+            Console.Write("Enter first number: ");
+            while (!double.TryParse(Console.ReadLine(), out num1))
+            {
+                Console.Write("Invalid first number! Enter a valid number: ");
+            }
+
+            Console.Write("Enter operator (+, -, *, /): ");
+            char op = Console.ReadKey().KeyChar;
+            Console.WriteLine();
+
+            Console.Write("Enter second number: ");
+            while (!double.TryParse(Console.ReadLine(), out num2))
+            {
+                Console.Write("Invalid second number! Enter a valid number: ");
+            }
+
+            switch (op)
+            {
+                case '+':
+                    Console.WriteLine($"Result: {num1} + {num2} = {num1 + num2}");
+                    break;
+                case '-':
+                    Console.WriteLine($"Result: {num1} - {num2} = {num1 - num2}");
+                    break;
+                case '*':
+                    Console.WriteLine($"Result: {num1} * {num2} = {num1 * num2}");
+                    break;
+                case '/':
+                    if (num2 == 0)
+                        Console.WriteLine("Error: Division by zero is not allowed.");
+                    else
+                        Console.WriteLine($"Result: {num1} / {num2} = {num1 / num2}");
+                    break;
+                default:
+                    Console.WriteLine("Invalid operator!");
+                    break;
+            }
+        }
+
+        public static void ReverseString()
+        {
+            Console.WriteLine("Enter a string: ");
+            string originalString = Console.ReadLine()!;
+
+            while(string.IsNullOrEmpty(originalString))
+            {
+                Console.Write("You didn't enter any thing! Enter a string: ");
+            }
+
+            string reversedString = string.Empty;
+
+            for (int i = originalString.Length - 1; i >= 0; i--)
+            {
+                reversedString += originalString[i];
+            }
+
+            Console.WriteLine($"Reversed String: {reversedString}");
+        }
+
+        public static void ReverseInt()
+        {
+            int number;
+            Console.Write("Enter an integer: ");
+            while (!int.TryParse(Console.ReadLine(), out number))
+            {
+                Console.Write("Invalid input! Please enter a valid number: ");
+            }
+
+            int reversedNumber = 0;
+            int temp = Math.Abs(number);
+           
+            while (temp > 0)
+            {
+                int remainder = temp % 10;
+                reversedNumber = (reversedNumber * 10) + remainder;
+                temp /= 10;
+            }
+
+            if(number < 0)
+            {
+                reversedNumber = -reversedNumber;
+            }
+
+            Console.WriteLine($"Reversed Integer: {reversedNumber}");
+        }
+
+        public static void PrimeNumbersFromRange()
+        {
+            int start, end;
+            Console.Write("Input starting number of range: ");
+            while (!int.TryParse(Console.ReadLine(), out start))
+            {
+                Console.Write("Invalid input! Please enter a valid number: ");
+            }
+            
+            Console.Write("Input ending number of range: ");
+            while (!int.TryParse(Console.ReadLine(), out end))
+            {
+                Console.Write("Invalid input! Please enter a valid number: ");
+            }            
+
+            for(int i = 2; i < end; i++)
+            {
+                bool isPrime= true;
+                for(int j = 2; j < i; j++)
+                {
+                    if (i % j == 0 && i != j)
+                        isPrime = false;                    
+                }
+
+                if(isPrime)
+                    Console.Write($"{i} ");
+            }
+
+            Console.WriteLine();
+        }
+
+        public static void ConvertDecimalToBinary()
+        {
+            int number;
+            Console.Write("Enter an integer: ");
+            while (!int.TryParse(Console.ReadLine(), out number))
+            {
+                Console.Write("Invalid input! Please enter a valid number: ");
+            }
+
+            int temp = number;
+            string reversedBinary = string.Empty;
+            string binary = string.Empty;
+
+            while(temp > 0)
+            {
+
+                if (temp % 2 == 0)
+                    reversedBinary += "0";
+                else 
+                    reversedBinary += "1";
+
+                temp /= 2;
+            }
+            
+
+            for (int i = reversedBinary.Length - 1; i >= 0; i--)
+            {
+                binary += reversedBinary[i];
+            }
+
+            Console.WriteLine($"Binary of [{number}]: {binary}");
         }
     }
 }

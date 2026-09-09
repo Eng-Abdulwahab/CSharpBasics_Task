@@ -4,12 +4,6 @@
     {
         static void Main(string[] args)
         {
-            // 29
-            Console.WriteLine("29) [Convert Decimal To Binary]\n-------------------------------");
-            TaskMethodsLibrary.ConvertDecimalToBinary();
-            Console.WriteLine("-------------------------------\n");
-            // end 
-
             // 1
             Console.WriteLine("1) [Print User Input Number]\n-------------------------------");
             TaskMethodsLibrary.GetNumberFromUser();
@@ -268,7 +262,47 @@
             Console.WriteLine("29) [Convert Decimal To Binary]\n-------------------------------");
             TaskMethodsLibrary.ConvertDecimalToBinary();
             Console.WriteLine("-------------------------------\n");
-            // end 
+            // end
+            
+            Console.WriteLine("\nPress Enter to continue...");
+            Console.ReadKey();
+
+            // 30
+            Console.WriteLine("30) [Check if Three Points Lie on a Straight Line]\n-------------------------------");
+            TaskMethodsLibrary.CheckCollinearPoints();
+            Console.WriteLine("-------------------------------\n");
+            // end
+
+            Console.WriteLine("\nPress Enter to continue...");
+            Console.ReadKey();
+
+            // 31
+            Console.WriteLine("31) [Evaluate Worker Efficiency]\n-------------------------------");
+            TaskMethodsLibrary.EvaluateWorkerEfficiency();            
+            Console.WriteLine("-------------------------------\n");
+            // end
+
+            Console.WriteLine("\nPress Enter to continue...");
+            Console.ReadKey();
+
+            // 32
+            Console.WriteLine("32) [Print Identity Matrix]\n-------------------------------");
+            TaskMethodsLibrary.PrintIdentityMatrix();            
+            Console.WriteLine("-------------------------------\n");
+            // end
+
+            // 33
+            Console.WriteLine("33) [Sum of Array Elements]\n-------------------------------");
+
+            int[] numbers = { 10, 20, 30, 40, 50 };
+
+            int totalSum = TaskMethodsLibrary.SumOfArrayElements(numbers);
+
+            Console.WriteLine($"Array elements: {string.Join(", ", numbers)}");
+            Console.WriteLine($"Sum of array elements = {totalSum}");
+
+            Console.WriteLine("-------------------------------\n");
+            // end
 
         }
     }

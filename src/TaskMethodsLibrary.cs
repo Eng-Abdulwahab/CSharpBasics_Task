@@ -308,7 +308,7 @@ namespace CSharpBasics_Task
 
             int days = monthNumber switch
             {
-                2 => 28, // February (Standard year assumption)
+                2 => 28, // February (Standard year)
                 4 or 6 or 9 or 11 => 30,
                 _ => 31
             };
@@ -468,5 +468,128 @@ namespace CSharpBasics_Task
 
             Console.WriteLine($"Binary of [{number}]: {binary}");
         }
+        public static void CheckCollinearPoints()
+        {
+            double x1, y1, x2, y2, x3, y3;
+
+            // Point 1
+            Console.Write("Enter x1: ");
+            while (!double.TryParse(Console.ReadLine(), out x1))
+            {
+                Console.Write("Invalid input! Enter a valid number for x1: ");
+            }
+
+            Console.Write("Enter y1: ");
+            while (!double.TryParse(Console.ReadLine(), out y1))
+            {
+                Console.Write("Invalid input! Enter a valid number for y1: ");
+            }
+
+            // Point 2
+            Console.Write("Enter x2: ");
+            while (!double.TryParse(Console.ReadLine(), out x2))
+            {
+                Console.Write("Invalid input! Enter a valid number for x2: ");
+            }
+
+            Console.Write("Enter y2: ");
+            while (!double.TryParse(Console.ReadLine(), out y2))
+            {
+                Console.Write("Invalid input! Enter a valid number for y2: ");
+            }
+
+            // Point 3
+            Console.Write("Enter x3: ");
+            while (!double.TryParse(Console.ReadLine(), out x3))
+            {
+                Console.Write("Invalid input! Enter a valid number for x3: ");
+            }
+
+            Console.Write("Enter y3: ");
+            while (!double.TryParse(Console.ReadLine(), out y3))
+            {
+                Console.Write("Invalid input! Enter a valid number for y3: ");
+            }
+
+            // Cross-multiplication prevents division by zero [DivideByZeroException]
+            if ((y2 - y1) * (x3 - x2) == (y3 - y2) * (x2 - x1))
+            {
+                Console.WriteLine("\nThe points lie on a single straight line.");
+            }
+            else
+            {
+                Console.WriteLine("\nThe points do not lie on a single straight line.");
+            }
+        }
+
+        public static void EvaluateWorkerEfficiency()
+        {
+            double hours;
+            Console.Write("Enter time taken to complete the task (in hours): ");
+            while (!double.TryParse(Console.ReadLine(), out hours) || hours < 0)
+            {
+                Console.Write("Invalid input! Please enter a valid positive duration in hours: ");
+            }
+
+            if (hours >= 2 && hours <= 3)
+            {
+                Console.WriteLine("Worker Efficiency: Highly efficient.");
+            }
+            else if (hours > 3 && hours <= 4)
+            {
+                Console.WriteLine("Worker Efficiency: Instructed to increase speed.");
+            }
+            else if (hours > 4 && hours <= 5)
+            {
+                Console.WriteLine("Worker Efficiency: Provided with training to enhance speed.");
+            }
+            else if (hours > 5)
+            {
+                Console.WriteLine("Worker Efficiency: Required to leave the company.");
+            }
+            else
+            {
+                Console.WriteLine("Worker completed task in less than 2 hours.");
+            }
+        }
+
+        public static void PrintIdentityMatrix()
+        {
+            int n;
+            Console.Write("Enter matrix size (n): ");
+            while (!int.TryParse(Console.ReadLine(), out n) || n <= 0)
+            {
+                Console.Write("Invalid input! Please enter a positive integer for size (n): ");
+            }
+
+            Console.WriteLine($"\nIdentity Matrix of size {n}x{n}:\n");
+
+            for (int row = 0; row < n; row++)
+            {
+                for (int col = 0; col < n; col++)
+                {
+                    if (row == col)
+                    {
+                        Console.Write("1 ");
+                    }
+                    else
+                    {
+                        Console.Write("0 ");
+                    }
+                }
+                Console.WriteLine();
+            }
+        }
+
+        public static int SumOfArrayElements(int[] arr)
+        {
+            int sum = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sum += arr[i];
+            }
+            return sum;
+        }
+
     }
 }

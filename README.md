@@ -1,22 +1,23 @@
-# C# Basics & Task Solutions
+# C# Basics & Algorithmic Problem Solving
 
-This repository contains the implementation of the basic C# concepts task. The project is organized as a reusable class library with a console entry point to keep the code modular and clean.
+A structured collection of C# console applications demonstrating core language mechanics, data structure manipulations, and defensive programming practices.
 
-## Project Structure
+## Key Technical Highlights & Edge Case Handling
 
-All source code is located inside the `src/` directory to maintain a standard repository layout:
+- **Safe Input Parsing & Validation:** All user inputs are guarded using `int.TryParse` within validation loops to enforce type safety and guarantee zero unhandled runtime exceptions (`FormatException` / `OverflowException`).
+- **Zero-Division Avoidance in Geometric Logic:** Solved point collinearity using standard cross-multiplication:
+  $$ (y_2 - y_1) \times (x_3 - x_2) == (y_3 - y_2) \times (x_2 - x_1) $$
+  This bypasses floating-point precision issues and completely eliminates potential `DivideByZeroException` bugs.
+- **Array & String Manipulations:**
+  - Sub-array distance evaluation using position tracking algorithms.
+  - Implemented string reversing and parsing techniques cleanly.
+  - Memory-efficient string constructions using `StringBuilder` where appropriate.
+- **Matrix & Multidimensional Processing:** Matrix operations handled with direct nested iteration to maintain $O(N \times M)$ efficiency.
+- **UI & CLI Presentation:** Terminal layout, user cues, and output formatting were refined with AI assistance to ensure clean CLI presentation.
 
-- `src/TaskMethodsLibrary.cs`: Contains the implementation of all required methods and algorithm tasks.
-- `src/Program.cs`: Acts as the execution layer to run and test the functions. It also contains the answers and explanations for the theoretical and MCQ questions written directly as code comments.
+## Core Concepts Covered
 
-## Design Decisions
-
-- **Class Library Architecture**: Organised all task solutions into a dedicated `TaskMethodsLibrary` class containing static methods, rather than dumping all logic inside `Program.cs`. Even though it wasn't explicitly requested, this architecture was chosen to promote code reusability, maintainability, and clean separation of concerns between business logic and the execution layer.
-- **Error Handling**: Implemented `int.TryParse` across methods that require user input instead of `try-catch` blocks to prevent exception overhead and improve performance.
-- **Reference vs Value Types**: Demonstrated memory allocation differences using `StringBuilder` for mutable reference types and standard primitives for value types.
-
-## How to Run
-
-1. Open the solution in Visual Studio or your preferred IDE.
-2. Build the project using `dotnet build`.
-3. Run the application using `dotnet run`.
+- Defensive Programming & Exception Prevention
+- Memory efficiency (`StringBuilder` vs String concatenation)
+- Algorithm optimization & Linear algebraic operations
+- Control flow & Data validation strategies

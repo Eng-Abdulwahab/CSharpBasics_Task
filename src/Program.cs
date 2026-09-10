@@ -1,374 +1,203 @@
-﻿namespace CSharpBasics_Task
+﻿using System;
+
+namespace CSharpBasics_Task
 {
     internal class Program
     {
         static void Main(string[] args)
-        {            
-            // 1
-            Console.WriteLine("1) [Print User Input Number]\n-------------------------------");
+        {
+            Console.WriteLine("==================================================");
+            Console.WriteLine("        C# BASICS TASK - METHOD EXECUTIONS        ");
+            Console.WriteLine("==================================================\n");
+
+            #region Basics & Conversions (1 - 4)
+            Console.WriteLine("--- [1] Get Number From User ---");
             TaskMethodsLibrary.GetNumberFromUser();
-            Console.WriteLine("-------------------------------\n");
-            // end
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
+            Console.WriteLine("\n--- [2] Convert From String To Int ---");
+            TaskMethodsLibrary.ConvertFromStringToInt("123");
+            TaskMethodsLibrary.ConvertFromStringToInt("ABC");
 
-            // 2
-            Console.WriteLine("2) [Safe String-to-Int Conversion]\n-------------------------------");
-            TaskMethodsLibrary.ConvertFromStringToInt("hello"); // Handled safely using int.TryParse without exceptions
-            Console.WriteLine("-------------------------------\n");
-            // end
+            Console.WriteLine("\n--- [3] Perform Floating-Point Math ---");
+            TaskMethodsLibrary.PerformFloatingPointMath(10.5, 4.3);
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
+            Console.WriteLine("\n--- [4] Extract Substring ---");
+            TaskMethodsLibrary.ExtractSubstring("Hello .NET Core API", 6, 4);
+            #endregion
 
-            // 3
-            Console.WriteLine("3) [Floating-Point Math Operation]\n-------------------------------");
-            TaskMethodsLibrary.PerformFloatingPointMath(0.1, 0.3);
-            Console.WriteLine("-------------------------------\n");
-            // end
-
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 4
-            Console.WriteLine("4) [Extract Substring]\n-------------------------------");
-            TaskMethodsLibrary.ExtractSubstring("Hello World!", 0, 9);
-            Console.WriteLine("-------------------------------\n");
-            // end
-
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 5
-            Console.WriteLine("5) [Value Type Modification Test]\n-------------------------------");
+            #region Types & Memory Logic (5 - 7)
+            Console.WriteLine("\n--- [5] Test Value Type ---");
             TaskMethodsLibrary.TestValueType();
-            Console.WriteLine("-------------------------------\n");
-            // end
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 6
-            Console.WriteLine("6) [Reference Type Modification Test]\n-------------------------------");
+            Console.WriteLine("\n--- [6] Test Reference Type ---");
             TaskMethodsLibrary.TestReferenceType();
-            Console.WriteLine("-------------------------------\n");
-            // end
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
+            Console.WriteLine("\n--- [7] Concatenate Strings ---");
+            TaskMethodsLibrary.ConcatenatedString("Backend ", "Developer");
+            #endregion
 
-            // 7
-            Console.WriteLine("7) [String Concatenation]\n-------------------------------");
-            TaskMethodsLibrary.ConcatenatedString("Hello ", "World!");
-            Console.WriteLine("-------------------------------\n");
-            // end
-
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 8
-            Console.WriteLine("8) [Calculate Simple Interest]\n-------------------------------");
+            #region Financial & Mathematical Calculations (8 - 10)
+            Console.WriteLine("\n--- [8] Calculate Simple Interest ---");
             double interest = TaskMethodsLibrary.CalculateSimpleInterest(10000, 5, 2);
-            Console.WriteLine($"Simple Interest = {interest}");
-            Console.WriteLine("-------------------------------\n");
-            // end
+            Console.WriteLine($"Simple Interest: {interest}");
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 9
-            Console.WriteLine("9) [Calculate Body Mass Index (BMI)]\n-------------------------------");
+            Console.WriteLine("\n--- [9] Calculate BMI ---");
             double bmi = TaskMethodsLibrary.CalculateBMI(75, 1.75);
-            Console.WriteLine($"BMI = {bmi:F2}");
-            Console.WriteLine("-------------------------------\n");
-            // end
+            Console.WriteLine($"Calculated BMI: {bmi:F2}");
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 10
-            Console.WriteLine("10) [Display Date Formats]\n-------------------------------");
+            Console.WriteLine("\n--- [10] Display Date Format ---");
             TaskMethodsLibrary.DisplayDateFormat();
-            Console.WriteLine("-------------------------------\n");
-            // end
+            #endregion
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 11
-            Console.WriteLine("11) [MCQ: DateTime Formatting]\n-------------------------------");
-            Console.WriteLine("Answer: (c) The event is on 06/14/2024.");
-            Console.WriteLine("-------------------------------\n");
-            // end
-
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 12
-            Console.WriteLine("12) [MCQ: Boolean Conversion Logic]\n-------------------------------");
-            Console.WriteLine("Answer: (f) A value 1 will be assigned to d.");
-            Console.WriteLine("-------------------------------\n");
-            // end
-
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 13
-            Console.WriteLine("13) [MCQ: Integer Division & Modulus]\n-------------------------------");
-            Console.WriteLine("Answer: (d) (6, 1).");
-            Console.WriteLine("-------------------------------\n");
-            // end
-
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 14
-            Console.WriteLine("14) [Check Divisibility by 3 and 4]\n-------------------------------");
+            #region Conditional Statements & Logic (14 - 18)
+            Console.WriteLine("\n--- [14] Check Divisibility By 3 and 4 ---");
             TaskMethodsLibrary.CheckDivisibilityBy3And4();
-            Console.WriteLine("-------------------------------\n");
-            // end
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 15
-            Console.WriteLine("15) [Check Positive or Negative]\n-------------------------------");
+            Console.WriteLine("\n--- [15] Check Positive Or Negative ---");
             TaskMethodsLibrary.CheckPositiveOrNegative();
-            Console.WriteLine("-------------------------------\n");
-            // end
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 16
-            Console.WriteLine("16) [Find Max and Min of 3 Numbers]\n-------------------------------");
+            Console.WriteLine("\n--- [16] Get Max And Min ---");
             TaskMethodsLibrary.GetMaxAndMin();
-            Console.WriteLine("-------------------------------\n");
-            // end
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 17
-            Console.WriteLine("17) [Check Even or Odd]\n-------------------------------");
+            Console.WriteLine("\n--- [17] Check Even Or Odd ---");
             TaskMethodsLibrary.CheckEvenOrOdd();
-            Console.WriteLine("-------------------------------\n");
-            // end
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 18
-            Console.WriteLine("18) [Check Vowel or Consonant Character]\n-------------------------------");
+            Console.WriteLine("\n--- [18] Check Vowel ---");
             TaskMethodsLibrary.CheckVowel();
-            Console.WriteLine("-------------------------------\n");
-            // end 
+            #endregion
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 19
-            Console.WriteLine("19) [Print Numbers Range from 1 to N]\n-------------------------------");
+            #region Loops & Iterations (19 - 22)
+            Console.WriteLine("\n--- [19] Display From One To N ---");
             TaskMethodsLibrary.DisplayFromOneToNumber();
-            Console.WriteLine("-------------------------------\n");
-            // end
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 20
-            Console.WriteLine("20) [Print Multiplication Table up to 12]\n-------------------------------");
+            Console.WriteLine("\n--- [20] Display Multiplication Table ---");
             TaskMethodsLibrary.DisplayNumberMultiTable();
-            Console.WriteLine("-------------------------------\n");
-            // end
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 21
-            Console.WriteLine("21) [Print Even Numbers between 1 and N]\n-------------------------------");
+            Console.WriteLine("\n--- [21] Display Even To N ---");
             TaskMethodsLibrary.DisplayEvenToNumber();
-            Console.WriteLine("-------------------------------\n");
-            // end
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 22
-            Console.WriteLine("22) [Calculate Power]\n-------------------------------");
+            Console.WriteLine("\n--- [22] Calculate Power ---");
             TaskMethodsLibrary.CalculatePower(2, 5);
-            Console.WriteLine("-------------------------------\n");
-            // end
+            #endregion
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 23
-            Console.WriteLine("23) [CalculateMarksStatistics]\n-------------------------------");
+            #region Applied Problem Solving & Logic (23 - 32)
+            Console.WriteLine("\n--- [23] Calculate Marks Statistics ---");
             TaskMethodsLibrary.CalculateMarksStatistics();
-            Console.WriteLine("-------------------------------\n");
-            // end
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-            
-            // 24
-            Console.WriteLine("24) [Display Number of Days in Month]\n-------------------------------");
-            TaskMethodsLibrary.DisplayDaysInMonth();            
-            Console.WriteLine("-------------------------------\n");
-            // end
+            Console.WriteLine("\n--- [24] Display Days In Month ---");
+            TaskMethodsLibrary.DisplayDaysInMonth();
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
+            Console.WriteLine("\n--- [25] Simple Calculator ---");
+            TaskMethodsLibrary.SimpleCalculator();
 
-            // 25
-            Console.WriteLine("25) [Simple Calculator]\n-------------------------------");
-            TaskMethodsLibrary.SimpleCalculator();            
-            Console.WriteLine("-------------------------------\n");
-            // end
-
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 26
-            Console.WriteLine("26) [Reversed String]\n-------------------------------");
+            Console.WriteLine("\n--- [26] Reverse String ---");
             TaskMethodsLibrary.ReverseString();
-            Console.WriteLine("-------------------------------\n");
-            // end
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 27
-            Console.WriteLine("27) [Reversed Integer]\n-------------------------------");
+            Console.WriteLine("\n--- [27] Reverse Int ---");
             TaskMethodsLibrary.ReverseInt();
-            Console.WriteLine("-------------------------------\n");
-            // end 
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 28
-            Console.WriteLine("28) [Prime Numbers From Range]\n-------------------------------");
+            Console.WriteLine("\n--- [28] Prime Numbers From Range ---");
             TaskMethodsLibrary.PrimeNumbersFromRange();
-            Console.WriteLine("-------------------------------\n");
-            // end 
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 29
-            Console.WriteLine("29) [Convert Decimal To Binary]\n-------------------------------");
+            Console.WriteLine("\n--- [29] Convert Decimal To Binary ---");
             TaskMethodsLibrary.ConvertDecimalToBinary();
-            Console.WriteLine("-------------------------------\n");
-            // end
-            
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
 
-            // 30
-            Console.WriteLine("30) [Check if Three Points Lie on a Straight Line]\n-------------------------------");
+            Console.WriteLine("\n--- [30] Check Collinear Points ---");
             TaskMethodsLibrary.CheckCollinearPoints();
-            Console.WriteLine("-------------------------------\n");
-            // end
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
+            Console.WriteLine("\n--- [31] Evaluate Worker Efficiency ---");
+            TaskMethodsLibrary.EvaluateWorkerEfficiency();
 
-            // 31
-            Console.WriteLine("31) [Evaluate Worker Efficiency]\n-------------------------------");
-            TaskMethodsLibrary.EvaluateWorkerEfficiency();            
-            Console.WriteLine("-------------------------------\n");
-            // end
+            Console.WriteLine("\n--- [32] Print Identity Matrix ---");
+            TaskMethodsLibrary.PrintIdentityMatrix();
+            #endregion
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
+            #region Arrays & Collection Algorithms (33 - 40)
+            Console.WriteLine("\n--- [33] Sum Of Array Elements ---");
+            int[] numbers = { 10, 20, 30, 40, 50 };
+            Console.WriteLine($"Sum = {TaskMethodsLibrary.SumOfArrayElements(numbers)}");
 
-            // 32
-            Console.WriteLine("32) [Print Identity Matrix]\n-------------------------------");
-            TaskMethodsLibrary.PrintIdentityMatrix();            
-            Console.WriteLine("-------------------------------\n");
-            // end
+            Console.WriteLine("\n--- [34] Merge Two Arrays And Order ---");
+            int[] merged = TaskMethodsLibrary.MergeTwoArraysAndOrder(new[] { 5, 2, 8 }, new[] { 1, 9, 3 });
+            Console.WriteLine($"Merged Sorted Array: {string.Join(", ", merged)}");
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
+            Console.WriteLine("\n--- [35] Frequency Of Each Element ---");
+            TaskMethodsLibrary.FrequencyOfEachElementInArr(new[] { 1, 2, 2, 3, 3, 3, 4 });
 
-            // 33
-            Console.WriteLine("33) [Sum of Array Elements]\n-------------------------------");
+            Console.WriteLine("\n--- [36] Get Max And Min Of Array ---");
+            TaskMethodsLibrary.GetMaxAndMinOfArray(numbers);
 
-            int[] numbers33 = { 10, 20, 30, 40, 50 };
+            Console.WriteLine("\n--- [37] Get Second Largest Element ---");
+            TaskMethodsLibrary.GetSecondLargestElementInArr(numbers);
 
-            int totalSum = TaskMethodsLibrary.SumOfArrayElements(numbers33);
+            Console.WriteLine("\n--- [38] Reverse Words ---");
+            TaskMethodsLibrary.ReverseWords();
 
-            Console.WriteLine($"Array elements: {string.Join(", ", numbers33)}");
-            Console.WriteLine($"Sum of array elements = {totalSum}");
+            Console.WriteLine("\n--- [39] Copy 2D Array ---");
+            TaskMethodsLibrary.CopyTwoDimensionalArray();
 
-            Console.WriteLine("-------------------------------\n");
-            // end
+            Console.WriteLine("\n--- [40] Print Array In Reverse ---");
+            TaskMethodsLibrary.PrintArrayInReverse();
+            #endregion
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
+            #region Functions Section Executions
+            Console.WriteLine("\n==================================================");
+            Console.WriteLine("          FUNCTIONS SECTION EXECUTIONS            ");
+            Console.WriteLine("==================================================");
 
-            // 34
-            Console.WriteLine("34) [Merge and Sort Two Unsorted Arrays]\n-------------------------------");
+            // Q1 Test
+            Console.WriteLine("\n--- [Func Q1] Value Types (ByVal vs ByRef) ---");
+            int val1 = 10, val2 = 10;
+            TaskMethodsLibrary.PassValueByVal(val1);
+            TaskMethodsLibrary.PassValueByRef(ref val2);
+            Console.WriteLine($"ByVal Result: {val1} (Unchanged)");
+            Console.WriteLine($"ByRef Result: {val2} (Modified to 100)");
 
-            int[] array1 = { 9, 2, 5, 1 };
-            int[] array2 = { 8, 3, 7, 4 };
+            // Q2 Test
+            Console.WriteLine("\n--- [Func Q2] Reference Types (ByVal) ---");
+            int[] numbersArray = { 1, 2, 3 };
+            TaskMethodsLibrary.PassRefByVal(numbersArray);
+            Console.WriteLine($"Array[0] modified on Heap: {numbersArray[0]}");
 
-            int[] result = TaskMethodsLibrary.MergeTwoArraysAndOrder(array1, array2);
+            // Q3 Test
+            Console.WriteLine("\n--- [Func Q3] Sum and Subtract with Out ---");
+            TaskMethodsLibrary.SumAndSubtractWithOut(20, 10, out int sumResult, out int subResult);
+            Console.WriteLine($"Sum (20 + 10) = {sumResult}");
+            Console.WriteLine($"Subtract (20 - 10) = {subResult}");
 
-            Console.WriteLine($"Array 1: {string.Join(", ", array1)}");
-            Console.WriteLine($"Array 2: {string.Join(", ", array2)}");
-            Console.WriteLine($"Merged & Sorted Array: {string.Join(", ", result)}");
+            // Q4 Test
+            Console.WriteLine("\n--- [Func Q4] Calculate Sum Of Digits ---");
+            TaskMethodsLibrary.CalculateSumOfDigits();
 
-            Console.WriteLine("-------------------------------\n");
-            // end
+            // Q5 Test
+            Console.WriteLine("\n--- [Func Q5] Is Prime Number ---");
+            int testNum = 17;
+            bool isPrime = TaskMethodsLibrary.IsPrimeNumber(testNum);
+            Console.WriteLine($"Is {testNum} prime? {isPrime}");
 
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
+            // Q6 Test
+            Console.WriteLine("\n--- [Func Q6] Min and Max In Array By Ref ---");
+            int[] testArray = { 15, 3, 99, 42, 8 };
+            int minVal = 0, maxVal = 0;
+            TaskMethodsLibrary.MinMaxInArrayByRef(testArray, ref minVal, ref maxVal);
+            Console.WriteLine($"Array: [{string.Join(", ", testArray)}]");
+            Console.WriteLine($"Minimum = {minVal}, Maximum = {maxVal}");
 
-            // 35
-            Console.WriteLine("35) [Frequency of Each Element in Array]\n-------------------------------");
+            // Q7 Test
+            Console.WriteLine("\n--- [Func Q7] Calculate Factorial ---");
+            int factNum = 5;
+            Console.WriteLine($"Factorial of {factNum} = {TaskMethodsLibrary.CalculateFactorial(factNum)}");
 
-            int[] numbers35 = { 5, 2, 8, 5, 2, 5, 9, 8 };
+            // Q8 Test
+            Console.WriteLine("\n--- [Func Q8] Change Char In String ---");
+            string originalStr = "Task";
+            string modifiedStr = TaskMethodsLibrary.ChangeCharInString(originalStr, 0, 'M');
+            Console.WriteLine($"Original: {originalStr} -> Modified: {modifiedStr}");
+            #endregion
 
-            Console.WriteLine($"Array elements: {string.Join(", ", numbers35)}\n");
-
-            TaskMethodsLibrary.FrequencyOfEachElementInArr(numbers35);
-
-            Console.WriteLine("-------------------------------\n");
-            // end
-
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 36
-            Console.WriteLine("36) [Max and Min in Array]\n-------------------------------");
-
-            int[] numbers36 = { 45, 12, 89, 3, 27, -5, 64 };
-
-            Console.WriteLine($"Array elements: {string.Join(", ", numbers36)}\n");
-
-            TaskMethodsLibrary.GetMaxAndMinOfArray(numbers36);
-
-            Console.WriteLine("-------------------------------\n");
-            // end
-
-            Console.WriteLine("\nPress Enter to continue...");
-            Console.ReadKey();
-
-            // 37
-            Console.WriteLine("37) [Find Second Largest Element in Array]\n-------------------------------");
-
-            int[] numbers37 = { 10, 20, 4, 45, 99, 99, 35 };
-
-            Console.WriteLine($"Array elements: {string.Join(", ", numbers37)}\n");
-
-            TaskMethodsLibrary.GetSecondLargestElementInArr(numbers37);
-
-            Console.WriteLine("-------------------------------\n");
-            // end
+            Console.WriteLine("\n==================================================");
+            Console.WriteLine("          ALL TASKS EXECUTED SUCCESSFULLY         ");
+            Console.WriteLine("==================================================");
         }
     }
 }

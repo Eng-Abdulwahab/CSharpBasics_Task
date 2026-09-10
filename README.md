@@ -18,7 +18,7 @@ A structured collection of C# console applications demonstrating core language m
 
 - **Safe Input Parsing & Validation:** All user inputs are guarded using `int.TryParse` within validation loops to enforce type safety and guarantee zero unhandled runtime exceptions (`FormatException` / `OverflowException`).
 - **Zero-Division Avoidance in Geometric Logic:** Solved point collinearity using standard cross-multiplication:
-  $$ (y_2 - y_1) \times (x_3 - x_2) == (y_3 - y_2) \times (x_2 - x_1) $$
+  (y_2 - y_1) / (x_3 - x_2) == (y_3 - y_2) / (x_2 - x_1)
   This bypasses floating-point precision issues and completely eliminates potential `DivideByZeroException` bugs.
 - **Array & String Manipulations:**
   - Sub-array distance evaluation using position tracking algorithms.

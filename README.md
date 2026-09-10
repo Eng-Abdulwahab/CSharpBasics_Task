@@ -2,6 +2,18 @@
 
 A structured collection of C# console applications demonstrating core language mechanics, data structure manipulations, and defensive programming practices.
 
+## Project Structure
+
+```text
+├── src/
+│   ├── CSharpBasics_Task.csproj     # Project setup and .NET properties
+│   ├── Program.cs                   # Entry point & execution flow dispatcher
+│   └── TaskMethodsLibrary.cs        # Core algorithms & problem solutions
+├── CSharpBasics_Task.sln           # Visual Studio solution file
+├── .gitignore                       # Ignored build files (bin/obj)
+└── README.md                        # Project documentation
+```
+
 ## Key Technical Highlights & Edge Case Handling
 
 - **Safe Input Parsing & Validation:** All user inputs are guarded using `int.TryParse` within validation loops to enforce type safety and guarantee zero unhandled runtime exceptions (`FormatException` / `OverflowException`).
@@ -18,6 +30,5 @@ A structured collection of C# console applications demonstrating core language m
 ## Core Concepts Covered
 
 - Defensive Programming & Exception Prevention
-- Memory efficiency (`StringBuilder` vs String concatenation)
 - Algorithm optimization & Linear algebraic operations
 - Control flow & Data validation strategies
